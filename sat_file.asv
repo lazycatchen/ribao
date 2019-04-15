@@ -71,21 +71,10 @@ for iii=[1,8:11]   %读取光伏电站数据，其中内蒙的表与风电合并了
 end
 [wind_Result,solar_Result]=merge_cell(datax);
 sum_rb=[wind_Result(:,[1,4]);solar_Result(:,[1,7])];  %合并风电、光伏数据
-result_rb=hit_rb(sum_rb,input_date);                            %调用汇总函数
+result_rb=hit_rb(sum_rb);                            %调用汇总函数
 strresult_rb=['F:\0\' mydir(end-4:end-1) '.xls'];    %以日期命名保存
 xlswrite(strresult_rb, wind_Result, 1);               %写入数据，1：风电，2：光虎，3：日报，4，汇总
 xlswrite(strresult_rb, solar_Result, 2);
 xlswrite(strresult_rb, sum_rb, 3);
 xlswrite(strresult_rb, result_rb, 4);
-xlswrite('E:\aa0011\ribao\日报综合数据.xlsx', result_rb);
-xlswrite('E:\aa0011\ribao\日报.xlsx', sum_rb, 2);
-xlswrite('E:\aa0011\ribao\日报.xlsx', result_rb, 3);
-
-
-
-
-
-
-
-
-
+xlswrite('E:\aa0011\ribao\日报综合数据.xlsx', result_rb, 'mydir(end-4:end-1) ');
