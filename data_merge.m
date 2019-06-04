@@ -7,7 +7,7 @@ new_Dirs=cell(1,11);
 DIRS=dir([mydir]);  %扩展名
 n=length(DIRS);
 num=n-2;
- for i=3:n  %此为遍历七个风电项目
+ for i=3:n  
    %*************打开文件**************** 
     filename=DIRS(i).name;
     str=[mydir filename];

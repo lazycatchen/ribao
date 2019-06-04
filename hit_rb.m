@@ -12,5 +12,5 @@ function result_rb=hit_rb(sum_rb,input_date)
     year_sum=year_Wind+year_Solar;
     date=data(6,2)+1;
     day_ave=year_sum/date*10000;
-    result_rb=[month_Wind year_Wind;month_Solar year_Solar;year_sum day_ave;day_sum day_Wind; day_Solar 4;input_date date];
+    result_rb=[month_Wind year_Wind;month_Solar year_Solar;year_sum day_ave;day_sum day_Wind; day_Solar 5;input_date date];
 end
