@@ -15,11 +15,11 @@ num=n-2;
     temp=xlsread(str,Sheet{1});
     temp2=xlsread(str,Sheet{2});
     table1=ones(19,1)*(i-2);
-    table2=ones(9,1)*(i-2);
+    table2=ones(10,1)*(i-2);
     for ii=1:19
         winddata(ii*num+i-num,:)  =[ii temp(ii,:)];
     end
-    for iii=1:9
+    for iii=1:10
         solardata(iii*num+i-num,:)  =[iii temp2(iii,:)];
      end
  end

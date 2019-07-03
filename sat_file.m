@@ -77,6 +77,7 @@ xlswrite(strresult_rb, wind_Result, 1);               %Ğ´ÈëÊı¾İ£¬1£º·çµç£¬2£º¹â»
 xlswrite(strresult_rb, solar_Result, 2);
 xlswrite(strresult_rb, sum_rb, 3);
 xlswrite(strresult_rb, result_rb, 4);
+xlswrite('E:\aa0011\ribao\ÈÕ±¨×ÛºÏÊı¾İ.xlsx', result_rb);%ÈÕ±¨×ÛºÏÊı¾İ£¨6.30£©
 xlswrite('E:\aa0011\ribao\ÈÕ±¨×ÛºÏÊı¾İ.xlsx', result_rb);
 xlswrite('E:\aa0011\ribao\ÈÕ±¨.xlsx', sum_rb, 2);
 xlswrite('E:\aa0011\ribao\ÈÕ±¨.xlsx', result_rb, 3);
