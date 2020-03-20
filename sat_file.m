@@ -27,7 +27,7 @@ disp(['计算',num2str(input_date),'日']);
        elseif i==2
            sheet_Num=input_date;   %陕西的表也提前写了一堆日期
        elseif i==5
-           sheet_Num=length(Sheet)-1; %新疆的表隐藏了一个文件
+           sheet_Num=length(Sheet); %新疆的表隐藏了一个文件  %20200102修正，新疆删除了隐藏表
        else
            sheet_Num=length(Sheet);   %其他场站就正常了
        end
@@ -64,7 +64,7 @@ for iii=[1,8:11]   %读取光伏电站数据，其中内蒙的表与风电合并了
        temp=xlsread(str,Sheet{sheet_Num});
        ud_Data=temp(:,1:13);
       ud_Data(any(isnan(ud_Data)'),:)=[];
-      datax{1,save_count}=ud_Data; 
+      datax{1,save_count}=ud_Data;   %第save_count存储数据
       datay_GF=[datay_GF;ud_Data];
       disp([filename '读取完毕' ]);
    end

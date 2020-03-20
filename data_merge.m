@@ -14,9 +14,9 @@ num=n-2;
     [Type Sheet Format]=xlsfinfo(str); 
     temp=xlsread(str,Sheet{1});
     temp2=xlsread(str,Sheet{2});
-    table1=ones(19,1)*(i-2);
+    table1=ones(20,1)*(i-2);
     table2=ones(10,1)*(i-2);
-    for ii=1:19
+    for ii=1:20
         winddata(ii*num+i-num,:)  =[ii temp(ii,:)];
     end
     for iii=1:10
